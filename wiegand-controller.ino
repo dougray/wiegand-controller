@@ -79,7 +79,7 @@ void decode(int len) {
 void verify() {
   boolean granted = false;
   
-  for (int i = 0; i < sizeof(authorized) / sizeof(int); i++) {
+  for (int i = 0; i < sizeof(authorized) / sizeof(int) - 1; i++) {
     if (credential.facility == authorized[i][0] && credential.card == authorized[i][1]) {
       granted = true;
       break;
